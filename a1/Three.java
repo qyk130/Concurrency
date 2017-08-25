@@ -18,7 +18,7 @@ public class Three extends Thread{
 			System.out.print(c);
 			i = (i + 1) % 80;
 			if (i == 0) {
-				writer.write('\n');
+				writer.lineBreak();
 				System.out.println();
 			}
 		}
