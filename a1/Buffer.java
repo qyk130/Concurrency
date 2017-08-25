@@ -1,8 +1,8 @@
 package a1;
 
 public class Buffer {
-	private char[] buffer;
-	private int in,out;
+	volatile private char[] buffer;
+	volatile private int in,out;
 	
 	public Buffer(){
 		buffer = new char[20];

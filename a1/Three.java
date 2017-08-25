@@ -12,9 +12,13 @@ public class Three extends Thread{
 	
 	public void run(){
 		char c = (char) 0;	
-		while (c != (char) -1) {
+		while (true) {
 			c = buffer.read();
+			if (c == (char) -1) {
+				break;
+			}
 			writer.write(c);
+			
 			System.out.print(c);
 			i = (i + 1) % 80;
 			if (i == 0) {
@@ -22,5 +26,6 @@ public class Three extends Thread{
 				System.out.println();
 			}
 		}
+		writer.close();
 	}
 }
